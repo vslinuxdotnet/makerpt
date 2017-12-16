@@ -11,6 +11,11 @@ const int httpPort = 443;
 const char* host = "api.coinbase.com";
 const char* url = "/v2/prices/EUR/spot";
 
+WiFiClientSecure client;
+
+String line = "";
+String vv = "";
+
 void setup() {
   // put your setup code here, to run once:
 Serial.begin(115200);
