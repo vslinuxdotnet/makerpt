@@ -1,3 +1,3 @@
 *** Vasco Santos ***
 Maker PT Repo
-www.vslinux.net
+http://www.movimentomaker.pt/
