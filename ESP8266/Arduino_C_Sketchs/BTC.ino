@@ -15,6 +15,9 @@ WiFiClientSecure client;
 
 String line = "";
 String vv = "";
+long coinpreviousMillis = 0;
+long previousMillis = 0;
+long coininterval = 10000; //10s
 
 void setup() {
   // put your setup code here, to run once:
@@ -61,5 +64,18 @@ void GetBTC(){
 
 void loop() {
   // put your main code here, to run repeatedly:
+  unsigned long currentMillis = millis();
+  
+ if (previousMillis  > 0) {
+    if (currentMillis - coinpreviousMillis > coininterval) {
+
+      coinpreviousMillis = currentMillis;
+
+     GetBTC();
+
+    }
+  }
+
+  
 
 }
